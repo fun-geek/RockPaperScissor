@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture RPS</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>Rock Paper Scissors <span class="highlight"> -play by Gesture</span></h1>
+      <p class="subtitle">Play Rock Paper Scissors with your hands!</p>
+    </header>
+
+    <main class="game-container">
+      <!-- Player Side -->
+      <div class="player-section">
+        <div class="video-wrapper">
+          <video id="webcam" autoplay playsinline></video>
+          <canvas id="output_canvas"></canvas>
+          <div class="gesture-label" id="player-gesture">Waiting...</div>
+        </div>
+
+        <!-- Training Controls -->
+        <div class="training-panel">
+          <h3>Train Your Gestures</h3>
+          <div class="training-buttons">
+            <button id="train-rock" class="train-btn">
+              <span>✊</span> Rock <span id="count-rock" class="count">0</span>
+            </button>
+            <button id="train-paper" class="train-btn">
+              <span>✋</span> Paper <span id="count-paper" class="count">0</span>
+            </button>
+            <button id="train-scissors" class="train-btn">
+              <span>✌️</span> Scissors <span id="count-scissors" class="count">0</span>
+            </button>
+          </div>
+          <button id="reset-training" class="reset-btn">Reset Training</button>
+        </div>
+
+        <h2>YOU</h2>
+      </div>
+
+      <!-- Center Info -->
+      <div class="center-section">
+        <div id="countdown" class="countdown-text">VS</div>
+        <button id="start-btn" class="primary-btn">START GAME</button>
+        <div id="result-display" class="result-text hidden"></div>
+      </div>
+
+      <!-- Computer Side -->
+      <div class="computer-section">
+        <div class="computer-hand-wrapper">
+          <div id="computer-hand" class="hand-emoji">✊</div>
+        </div>
+        <h2>CPU</h2>
+      </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+      <div class="loader"></div>
+      <p>Loading AI Model...</p>
+    </div>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
