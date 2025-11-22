@@ -2,7 +2,7 @@
 
 A modern, interactive web application that lets you play Rock Paper Scissors using real-time hand gestures via your webcam. Built with Vite, MediaPipe, and GSAP.
 
-![Project Preview](https://via.placeholder.com/800x450?text=Gesture+RPS+Preview)
+![Project Preview](https://rock-paper-scissor-ivory-iota.vercel.app/)
 
 ## 🌟 Features
 
